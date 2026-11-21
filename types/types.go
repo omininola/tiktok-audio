@@ -5,10 +5,10 @@ type Monitor struct {
 	X  int `json:"x"`
 }
 
-type Workspace struct {
-	ID              int    `json:"id"`
-	MonitorID       int    `json:"monitorID"`
-	LastWindowTitle string `json:"lastwindowtitle"`
+type Client struct {
+	Title   string `json:"title"`
+	Monitor int    `json:"monitor"`
+	PID     int    `json:"pid"`
 }
 
 type Audio struct {
@@ -18,4 +18,5 @@ type Audio struct {
 
 type AudioProperties struct {
 	Media string `json:"media.name"`
+	PID   string `json:"application.process.id"`
 }
